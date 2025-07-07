@@ -24,7 +24,7 @@ I maintain my systems with the precision of a watchmaker and the ruthlessness of
 |-------------|-----------------------|-------|----------------------------------|
 | **P15**     | 2x1.5TB NVMe (RAID 0) | 64GB  | Win11 + macOS + Arch (OpenCore)  |
 | **T480**    | 2TB NVMe + SATA caddy | 32GB  | Win11 + macOS + Arch (OpenCore)  |
-| **X1 Yoga** | 1TB NVMe (soldered)   | 16GB  | Win11 + macOS + Arch (OpenCore)  |
+| **X1 Yoga** | 1TB NVMe              | 16GB  | Win11 + macOS + Arch (OpenCore)  |
 
 ### **🧾 Reinstall Ritual**
 1. **Early Warning System**
@@ -78,9 +78,9 @@ I maintain my systems with the precision of a watchmaker and the ruthlessness of
    - A backup personality (for when tech breaks you)
 
 3. **ACCEPT THAT:**
-   > "All systems are born clean and deserve to die clean"  
-   > "`pacman -Syu` is the leading cause of second marriages"  
-   > "If you're not reinstalling, you're accumulating sin"
+   - "All systems are born clean and deserve to die clean"  
+   - "`pacman -Syu` is the leading cause of second marriages"  
+   - "If you're not reinstalling, you're accumulating sin"
 
 4. **UNDERSTAND** that:  
    - This software comes with **NO WARRANTY**  
@@ -101,7 +101,7 @@ I maintain my systems with the precision of a watchmaker and the ruthlessness of
 
 ## **🌋 Current Experiments**
 - **Project Phoenix:** OS that auto-reinstalls weekly
-- **`install-fu`:** CLI tool that judges your life choices
+- **[`install-fu`](https://github.com/HelllGuest/install-fu):** CLI tool that judges your life choices
 - **SSD Valhalla:** Proper rites for worn-out storage
 
 ---
