@@ -30,8 +30,9 @@ I maintain my systems with the precision of a watchmaker and the ruthlessness of
 1. **Early Warning System**
    ```bash
    # When systemd-analyze blame > coffee brew time
-   if [ $(systemd-analyze blame | head -n1 | cut -d' ' -f2) -gt 500 ]; then
-       echo "Initiating purge protocol..."
+   SLOWEST_TIME_MS=$(systemd-analyze blame | head -n1 | awk '{print int($1 * 1000)}')
+   if [ "$SLOWEST_TIME_MS" -gt 500 ]; then
+   echo "Initiating purge protocol..."
    fi
    ```
 
