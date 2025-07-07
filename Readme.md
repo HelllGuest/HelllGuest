@@ -26,41 +26,6 @@ I maintain my systems with the precision of a watchmaker and the ruthlessness of
 | **T480**    | 2TB NVMe + SATA caddy | 32GB  | Win11 + macOS + Arch (OpenCore)  |
 | **X1 Yoga** | 1TB NVMe              | 16GB  | Win11 + macOS + Arch (OpenCore)  |
 
-### **🧾 Reinstall Ritual**
-1. **Early Warning System**
-   ```bash
-   # When systemd-analyze blame > coffee brew time
-   SLOWEST_TIME_MS=$(systemd-analyze blame | head -n1 | awk '{print int($1 * 1000)}')
-   if [ "$SLOWEST_TIME_MS" -gt 500 ]; then
-   echo "Initiating purge protocol..."
-   fi
-   ```
-
-2. **Nuclear Sanitization**
-   ```bash
-   # For NVMe drives
-   sudo blkdiscard /dev/nvme0n1
-   # For stubborn sectors
-   sudo dd if=/dev/zero of=/dev/sda bs=1M status=progress conv=fsync
-   ```
-
-3. **UEFI Baptism**
-   ```bash
-   # Cleanse the NVRAM
-   sudo efibootmgr -B -b $(efibootmgr | grep 'Arch Linux' | cut -d' ' -f1 | tr -d '*Boot')
-   ```
-
----
-
-## **🏆 Reinstall Hall of Fame**
-| Device  | OS          | Time   | Verification                  | Notes                          |
-|---------|-------------|--------|-------------------------------|--------------------------------|
-| P15     | Arch        | 4:37   | systemd-analyze output        | Pre-cached all packages        |
-| T480    | Windows 11  | 6:12   | Task Manager screenshot       | Drivers on separate USB        |
-| X1 Yoga | macOS       | 8:45   | OpenCore debug log            | SMBIOS memorized               |
-
-*"Like F1 pit stops, but with more UEFI screaming"*
-
 ---
 
 ## **⚠️ Terms of Engagement**
